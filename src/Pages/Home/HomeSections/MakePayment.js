@@ -7,8 +7,10 @@ import line from '../../../images/Group 481777.svg'
 import paypal from '../../../images/paypal.svg'
 import play from '../../../images/play.svg'
 import apple from '../../../images/apple.svg'
+import toast, { Toaster } from 'react-hot-toast';
 
 const MakePayment = () => {
+    const notify = () => toast.success('Great! Your Payment is succesfully.');
     return (
         <div>
             <div>
@@ -48,7 +50,8 @@ const MakePayment = () => {
                                 </div>
 
                                 <div className='mx-auto'>
-                                    <button className='mt-7 ml-16 bg-gradient-to-b from-[#DEF9FA] via-[#5CE1E6] to-[#33BBCF] pb-19 pt-19 pr-33 pl-33 text-black font-medium py-5 px-10 rounded-lg'>Make Payment</button>
+                                    <button onClick={notify} className='mt-7 ml-16 bg-gradient-to-b from-[#DEF9FA] via-[#5CE1E6] to-[#33BBCF] pb-19 pt-19 pr-33 pl-33 text-black font-medium py-5 px-10 rounded-xl'>Make Payment</button>
+                                    <Toaster />
                                 </div>
 
 
